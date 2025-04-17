@@ -1,29 +1,22 @@
-// binary reverce.
-#include <stdio.h>
-void main()
-{
-    int num, pos;
-    printf("Enter a number :\n");
-    scanf("%d", &num);
+//WAP to print even digit given number.
 
-    for (pos = 31; pos >= 0; pos--)
-    {
-        printf("%d", num >> pos & 1);
-        if (pos % 4 == 0)
-        {
-            printf(" ");
-        }
-    }
-    printf("\n num=%d\n", num);
-    printf("after reverse :\n");
+#include<stdio.h>
+void main(){
 
-    for (pos = 0; pos <=31; pos++)
-    {
-        printf("%d", num >> pos & 1);
-        if (pos % 4 == 0)
+	int num,r;
+	printf("Enter a number:\n");
+	scanf("%d",&num);
+
+	for(1;num;num=num/10)
         {
-            printf(" ");
-        }
-    }
-    printf("\n num=%d\n", num);
+		r=num%10;
+		if(r%2==0)
+			printf("%d",r);
+
+
+	}
+
+
+
+
 }
